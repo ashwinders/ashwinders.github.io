@@ -6201,7 +6201,7 @@ header.scrolled {
     max-width: 100%;
   }
 
-  .sun {
+  .sun, .moon {
     margin: auto;
     transform: unset;
   }
