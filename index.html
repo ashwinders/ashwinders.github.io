@@ -151,24 +151,26 @@
                         navbarSidebar.classList.remove('show')
                         navbarToggler.classList.remove("show")
                     }
+
+                    //Prevents closing of sidebar if user clicks inside sidebar but closes if clicked on link
+                    navbar.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        if(e.target.classList.contains('navbar__link')){
+                            toggleSidebar()
+                        }
+                    })
+
+                    //This closes the sidebar if it is already open and user clicks outside of it.
+                    navbarSidebar.addEventListener("click", function(e) {
+                        if(navbarSidebar.classList.contains("show")) {
+                            navbarSidebar.classList.remove("show")
+                            navbarToggler.classList.remove("show")
+                        }
+                    })
                 }
             }
             
-            //Prevents closing of sidebar if user clicks inside sidebar but closes if clicked on link
-            navbar.addEventListener('click', function(e) {
-                e.stopPropagation();
-                if(e.target.classList.contains('navbar__link')){
-                    toggleSidebar()
-                }
-            })
-
-            //This closes the sidebar if it is already open and user clicks outside of it.
-            navbarSidebar.addEventListener("click", function(e) {
-                if(navbarSidebar.classList.contains("show")) {
-                    navbarSidebar.classList.remove("show")
-                    navbarToggler.classList.remove("show")
-                }
-            })
+            
 
             // Adds border-bottom to header navbar on scroll
             const header = document.querySelector('header');
