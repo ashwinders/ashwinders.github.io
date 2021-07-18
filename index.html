@@ -203,6 +203,14 @@
             htmlEl.classList.add('theme--dark')
             htmlEl.classList.remove('theme--light')
         }
+
+        if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            toggleTheme();
+        }
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            toggleTheme()
+        });
     </script>
 </body>
 </html>

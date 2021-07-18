@@ -32,7 +32,7 @@
     // width: 100vw;
 }
 
-.sun {
+.sun, .moon {
     height: 30vh;
     width: 30vh;
     min-height: 200px;
@@ -41,6 +41,12 @@
     border-radius: 50%;
     transform: translateX(-40%);
     box-shadow: 0 0 20px rgba(#FFCE84, 80%);
+}
+
+.moon {
+    display: none;
+    background-color: #ddd;
+    box-shadow: 0 0 30px rgba(#FFf, 80%);
 }
 
 .star {
@@ -99,10 +105,18 @@
         margin: auto;
         transform: unset;
     }
-
-
 }
 
 .next {
     height: 100vh;
+}
+
+.theme--dark {
+    .sun {
+        display: none;
+    }
+
+    .moon {
+        display: block;
+    }
 }

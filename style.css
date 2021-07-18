@@ -6133,7 +6133,7 @@ header.scrolled {
   padding: 3rem 0 6rem;
 }
 
-.sun {
+.sun, .moon {
   height: 30vh;
   width: 30vh;
   min-height: 200px;
@@ -6142,6 +6142,12 @@ header.scrolled {
   border-radius: 50%;
   transform: translateX(-40%);
   box-shadow: 0 0 20px rgba(255, 206, 132, 0.8);
+}
+
+.moon {
+  display: none;
+  background-color: #ddd;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
 }
 
 .star {
@@ -6202,6 +6208,13 @@ header.scrolled {
 }
 .next {
   height: 100vh;
+}
+
+.theme--dark .sun {
+  display: none;
+}
+.theme--dark .moon {
+  display: block;
 }
 
 :root {
