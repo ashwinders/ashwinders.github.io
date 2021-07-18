@@ -6286,4 +6286,11 @@ a:hover, a:focus, a:active {
   text-decoration: none;
 }
 
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
