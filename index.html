@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" class="theme--darks">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Light Mode Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="navbar__brand">Ashwinder S.</a>
+                <button class="navbar__toggler" role="button">
+                    <span class="navbar__toggler-icon"></span>
+                </button>
+                <div class="navbar__sidebar">
+                    <ul class="navbar__list">
+                        <li class="navbar__list-item">
+                            <a href="#skills" class="navbar__link"><i class="fas fa-magic"></i> Skills</a>
+                        </li>
+                        <li class="navbar__list-item">
+                            <a href="#about" class="navbar__link"><i class="fas fa-id-badge"></i> About</a>
+                        </li>
+                        <li class="navbar__list-item">
+                            <a href="#work" class="navbar__link"><i class="fas fa-boxes"></i> Work</a>
+                        </li>
+                        <li class="navbar__list-item">
+                            <a href="#contact" class="navbar__link"><i class="fas fa-at"></i> Contact</a>
+                        </li>
+                        <li class="navbar__list-item">
+                            <a href="javascript:toggleTheme()" class="navbar__link"><i class="fas fa-adjust d-inline-block"></i> Theme</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="scene">
+                            <div class="sun"></div>
+                            <div class="moon"></div>
+                            <div class="star star-1">
+                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 15L9.79611 9.47214H15.6085L10.9062 6.05573L12.7023 0.527864L8 3.94427L3.29772 0.527864L5.09383 6.05573L0.391548 9.47214H6.20389L8 15Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="star star-2">
+                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 15L9.79611 9.47214H15.6085L10.9062 6.05573L12.7023 0.527864L8 3.94427L3.29772 0.527864L5.09383 6.05573L0.391548 9.47214H6.20389L8 15Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="star star-3">
+                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 15L9.79611 9.47214H15.6085L10.9062 6.05573L12.7023 0.527864L8 3.94427L3.29772 0.527864L5.09383 6.05573L0.391548 9.47214H6.20389L8 15Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="star star-4">
+                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 15L9.79611 9.47214H15.6085L10.9062 6.05573L12.7023 0.527864L8 3.94427L3.29772 0.527864L5.09383 6.05573L0.391548 9.47214H6.20389L8 15Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="star star-5">
+                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 15L9.79611 9.47214H15.6085L10.9062 6.05573L12.7023 0.527864L8 3.94427L3.29772 0.527864L5.09383 6.05573L0.391548 9.47214H6.20389L8 15Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="cloud cloud-1">
+                                <svg width="182" height="117" viewBox="0 0 182 117" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="74.5089" width="181.94" height="41.5864" rx="20.7932" fill="white"/>
+                                    <circle cx="85.7718" cy="43.3191" r="43.3191" fill="white"/>
+                                    <circle cx="42.0195" cy="74.9421" r="28.1574" fill="white"/>
+                                    <circle cx="136.455" cy="59.3472" r="35.9549" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="cloud cloud-2">
+                                <svg width="208" height="133" viewBox="0 0 208 133" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="85.1809" width="208" height="47.5429" rx="23.7714" fill="#F9F9F9"/>
+                                    <circle cx="98.057" cy="49.5238" r="49.5238" fill="#F9F9F9"/>
+                                    <ellipse cx="149.19" cy="78.9905" rx="32.1905" ry="32.1905" fill="#F9F9F9"/>
+                                    <circle cx="47.6048" cy="58.0048" r="41.1048" fill="#F9F9F9"/>
+                                </svg>
+                            </div>
+                            <div class="cloud cloud-3">
+                                <svg width="244" height="124" viewBox="0 0 244 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="88.4928" width="244" height="35.2253" rx="17.6127" fill="white"/>
+                                    <circle cx="145.627" cy="51.9788" r="51.9788" fill="white"/>
+                                    <circle cx="82.9084" cy="68.3028" r="37.3732" fill="white"/>
+                                    <circle cx="42.2338" cy="88.6282" r="24.1916" fill="white"/>
+                                    <circle cx="202.722" cy="81.5808" r="30.8908" fill="white"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h2 class="hero__title">
+                            <span class="proficient">Proficient</span>
+                            <br>
+                            Front-end Web Developer
+                        </h2>
+                        <p class="hero__subtitle">
+                            I develop experiences that your clients will <span class="love">love</span>.
+                        </p>
+                        <div class="hero__cta-wrapper">
+                            <button class="btn btn-primary">
+                                Contact
+                            </button>
+                            <button class="btn btn-outline-primary">
+                                My Work
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="next"></section>
+    </main>
+    <footer>
+
+    </footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
+    <script>
+        window.addEventListener('load',() => {
+            //Sidebar wrapper
+            const navbarSidebar = document.querySelector(".navbar__sidebar")
+
+            //Sidebar toggle button
+            const navbarToggler = document.querySelector(".navbar__toggler")
+            
+            //Sidebar list
+            const navbar = document.querySelector(".navbar__list")
+
+            // Trigger sidebar on click
+            navbarToggler.addEventListener('click',toggleSidebar)
+
+            function toggleSidebar() {
+                //Opens/closes sidebar by toggling 'show' class if not already present where screen size < 1200px
+                if (window.matchMedia("max-width: 1199.98px")) {
+                    if(!navbarSidebar.classList.contains("show")) {
+                        navbarSidebar.classList.add('show')
+                        navbarToggler.classList.add("show")
+                    }
+                    else {
+                        navbarSidebar.classList.remove('show')
+                        navbarToggler.classList.remove("show")
+                    }
+                }
+            }
+            
+            //Prevents closing of sidebar if user clicks inside sidebar but closes if clicked on link
+            navbar.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if(e.target.classList.contains('navbar__link')){
+                    toggleSidebar()
+                }
+            })
+
+            //This closes the sidebar if it is already open and user clicks outside of it.
+            navbarSidebar.addEventListener("click", function(e) {
+                if(navbarSidebar.classList.contains("show")) {
+                    navbarSidebar.classList.remove("show")
+                    navbarToggler.classList.remove("show")
+                }
+            })
+
+            // Adds border-bottom to header navbar on scroll
+            const header = document.querySelector('header');
+
+            document.addEventListener('scroll', (e)=>{
+                if(window.scrollY > 2) {
+                    header.classList.add('scrolled')
+                }
+                else {
+                    header.classList.remove('scrolled')
+                }
+            })
+
+            // const scrollTopButton = document.querySelector(".scroll-to-top")
+            // document.addEventListener('scroll', (event)=>{
+            //     if(window.scrollY > window.innerHeight/2){
+            //         scrollTopButton.classList.add('visible')
+            //     } else {
+            //         scrollTopButton.classList.remove('visible')
+            //     }
+            // })
+        }) 
+
+        function toggleTheme() {
+            const htmlEl = document.querySelector("html");
+            if (htmlEl.classList.contains('theme--dark')) {
+                htmlEl.classList.remove('theme--dark')
+                return htmlEl.classList.add('theme--light')
+            } 
+            htmlEl.classList.add('theme--dark')
+            htmlEl.classList.remove('theme--light')
+        }
+    </script>
+</body>
+</html>

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass scss/style.scss style.css",
+    "wsass": "sass --watch scss/style.scss style.css"
   },
   "keywords": [],
   "author": "",
