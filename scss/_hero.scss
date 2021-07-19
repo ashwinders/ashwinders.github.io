@@ -45,8 +45,13 @@
 
 .moon {
     display: none;
-    background-color: #ddd;
+    background-color: #fff;
     box-shadow: 0 0 30px rgba(#FFf, 80%);
+
+    svg {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .star {

@@ -61,7 +61,7 @@ header {
     z-index: 5;
     width: 100%;
     height: 100vh;
-    background-color: hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95);
+    background-color: hsla(var(--color-dark-h), var(--color-dark-s), var(--color-dark-l), 0.7);
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -74,7 +74,19 @@ header {
 
         .navbar__list {
             transform: translateX(0);
-            box-shadow: 0 0 8px hsla(var(--color-accent-h), var(--color-accent-s), var(--color-accent-l), 0.75);
+            // box-shadow: 0 0 8px hsla(var(--color-accent-h), var(--color-accent-s), var(--color-accent-l), 0.75);
+        }
+    }
+}
+
+.theme--dark {
+    .navbar__sidebar {
+        background-color: hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.9);
+
+        &.show {
+            .navbar__list {
+                background-color: hsl(var(--color-bg-h), var(--color-bg-s), 15%);
+            }
         }
     }
 }
