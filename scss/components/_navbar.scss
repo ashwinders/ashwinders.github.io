@@ -79,17 +79,20 @@ header {
     }
 }
 
-.theme--dark {
-    .navbar__sidebar {
-        background-color: hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.9);
-
-        &.show {
-            .navbar__list {
-                background-color: hsl(var(--color-bg-h), var(--color-bg-s), 15%);
+@include media-breakpoint-down(lg) {
+    .theme--dark {
+        .navbar__sidebar {
+            background-color: hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.9);
+    
+            &.show {
+                .navbar__list {
+                    background-color: hsl(var(--color-bg-h), var(--color-bg-s), 15%);
+                }
             }
         }
     }
 }
+
 
 .navbar__list {
     list-style: none;

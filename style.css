@@ -5927,6 +5927,125 @@ a.text-dark:hover, a.text-dark:focus {
   visibility: hidden !important;
 }
 
+:root {
+  --color-bg-h: 203;
+  --color-bg-s: 100%;
+  --color-bg-l: 90%;
+  --color-base-h: 0;
+  --color-base-s: 0%;
+  --color-base-l: 7%;
+  --color-accent-h: 346;
+  --color-accent-s: 84%;
+  --color-accent-l: 61%;
+  --color-light-h: 346;
+  --color-light-s: 84%;
+  --color-light-l: 61%;
+  --color-dark-h: 0;
+  --color-dark-s: 0%;
+  --color-dark-l: 7%;
+  --color-bg: hsl(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l));
+  --color-base: hsl(var(--color-base-h), var(--color-base-s), var(--color-base-l));
+  --color-accent: hsl(var(--color-accent-h), var(--color-accent-s), var(--color-accent-l));
+  --color-light: hsl(var(--color-light-h), var(--color-light-s), var(--color-light-l));
+  --color-dark: hsl(var(--color-dark-h), var(--color-dark-s), var(--color-dark-l));
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-h: 241;
+    --color-bg-s: 68%;
+    --color-bg-l: 12%;
+    --color-base-h: 0;
+    --color-base-s: 0%;
+    --color-base-l: 100%;
+    --color-light-h: 0;
+    --color-light-s: 0%;
+    --color-light-l: 7%;
+    --color-dark-h: 0;
+    --color-dark-s: 0%;
+    --color-dark-l: 100%;
+  }
+}
+.theme--light {
+  --color-bg-h: 203;
+  --color-bg-s: 100%;
+  --color-bg-l: 90%;
+  --color-base-h: 0;
+  --color-base-s: 0%;
+  --color-base-l: 7%;
+  --color-accent-h: 346;
+  --color-accent-s: 84%;
+  --color-accent-l: 61%;
+  --color-light-h: 346;
+  --color-light-s: 84%;
+  --color-light-l: 61%;
+  --color-dark-h: 0;
+  --color-dark-s: 0%;
+  --color-dark-l: 7%;
+}
+
+.theme--dark {
+  --color-bg-h: 241;
+  --color-bg-s: 68%;
+  --color-bg-l: 12%;
+  --color-base-h: 0;
+  --color-base-s: 0%;
+  --color-base-l: 100%;
+  --color-light-h: 0;
+  --color-light-s: 0%;
+  --color-light-l: 7%;
+  --color-dark-h: 0;
+  --color-dark-s: 0%;
+  --color-dark-l: 100%;
+}
+
+a {
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: underline;
+}
+a:hover, a:focus, a:active {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  scroll-snap-type: y;
+}
+
+main > section {
+  scroll-snap-align: start;
+  scroll-margin-top: 6rem;
+}
+
+@media (min-width: 992px) {
+  main > section {
+    scroll-margin-top: 7.5rem;
+  }
+}
+html, body {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.section__heading {
+  font-weight: 900;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -6004,13 +6123,14 @@ header.scrolled {
   transform: translateX(0);
 }
 
-.theme--dark .navbar__sidebar {
-  background-color: hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.9);
+@media (max-width: 1199.98px) {
+  .theme--dark .navbar__sidebar {
+    background-color: hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.9);
+  }
+  .theme--dark .navbar__sidebar.show .navbar__list {
+    background-color: hsl(var(--color-bg-h), var(--color-bg-s), 15%);
+  }
 }
-.theme--dark .navbar__sidebar.show .navbar__list {
-  background-color: hsl(var(--color-bg-h), var(--color-bg-s), 15%);
-}
-
 .navbar__list {
   list-style: none;
   background-color: var(--color-bg);
@@ -6134,6 +6254,10 @@ header.scrolled {
   margin-bottom: 1.5rem;
 }
 
+.hero__cta-wrapper .btn {
+  text-decoration: none;
+}
+
 .scene {
   position: relative;
   padding: 3rem 0 6rem;
@@ -6144,7 +6268,7 @@ header.scrolled {
   width: 30vh;
   min-height: 200px;
   min-width: 200px;
-  background-color: #FFCE84;
+  background-color: #FFC062;
   border-radius: 50%;
   transform: translateX(-40%);
   box-shadow: 0 0 20px rgba(255, 206, 132, 0.8);
@@ -6175,6 +6299,9 @@ header.scrolled {
   animation-direction: alternate;
   animation-timing-function: linear;
   transform: scale(0.75);
+}
+.cloud:hover {
+  animation-play-state: paused;
 }
 
 .cloud-1 {
@@ -6216,10 +6343,6 @@ header.scrolled {
     transform: unset;
   }
 }
-.next {
-  height: 100vh;
-}
-
 .theme--dark .sun {
   display: none;
 }
@@ -6227,93 +6350,8 @@ header.scrolled {
   display: block;
 }
 
-:root {
-  --color-bg-h: 203;
-  --color-bg-s: 100%;
-  --color-bg-l: 90%;
-  --color-base-h: 0;
-  --color-base-s: 0%;
-  --color-base-l: 7%;
-  --color-accent-h: 346;
-  --color-accent-s: 84%;
-  --color-accent-l: 61%;
-  --color-light-h: 346;
-  --color-light-s: 84%;
-  --color-light-l: 61%;
-  --color-dark-h: 0;
-  --color-dark-s: 0%;
-  --color-dark-l: 7%;
-  --color-bg: hsl(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l));
-  --color-base: hsl(var(--color-base-h), var(--color-base-s), var(--color-base-l));
-  --color-accent: hsl(var(--color-accent-h), var(--color-accent-s), var(--color-accent-l));
-  --color-light: hsl(var(--color-light-h), var(--color-light-s), var(--color-light-l));
-  --color-dark: hsl(var(--color-dark-h), var(--color-dark-s), var(--color-dark-l));
-}
-
-@media screen and (prefers-color-scheme: dark) {
-  :root {
-    --color-bg-h: 241;
-    --color-bg-s: 68%;
-    --color-bg-l: 12%;
-    --color-base-h: 0;
-    --color-base-s: 0%;
-    --color-base-l: 100%;
-    --color-light-h: 0;
-    --color-light-s: 0%;
-    --color-light-l: 7%;
-    --color-dark-h: 0;
-    --color-dark-s: 0%;
-    --color-dark-l: 100%;
-  }
-}
-.theme--light {
-  --color-bg-h: 203;
-  --color-bg-s: 100%;
-  --color-bg-l: 90%;
-  --color-base-h: 0;
-  --color-base-s: 0%;
-  --color-base-l: 7%;
-  --color-accent-h: 346;
-  --color-accent-s: 84%;
-  --color-accent-l: 61%;
-  --color-light-h: 346;
-  --color-light-s: 84%;
-  --color-light-l: 61%;
-  --color-dark-h: 0;
-  --color-dark-s: 0%;
-  --color-dark-l: 7%;
-}
-
-.theme--dark {
-  --color-bg-h: 241;
-  --color-bg-s: 68%;
-  --color-bg-l: 12%;
-  --color-base-h: 0;
-  --color-base-s: 0%;
-  --color-base-l: 100%;
-  --color-light-h: 0;
-  --color-light-s: 0%;
-  --color-light-l: 7%;
-  --color-dark-h: 0;
-  --color-dark-s: 0%;
-  --color-dark-l: 100%;
-}
-
-a {
-  color: var(--color-accent);
-  font-weight: 500;
-  text-decoration: underline;
-}
-a:hover, a:focus, a:active {
-  color: var(--color-accent);
-  text-decoration: none;
-}
-
-@media (max-width: 575.98px) {
-  .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
+.about p {
+  line-height: 2;
 }
 
 /*# sourceMappingURL=style.css.map */

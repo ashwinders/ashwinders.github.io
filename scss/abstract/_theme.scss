@@ -115,6 +115,29 @@ a {
     }
 }
 
+img {
+    max-width: 100%;
+}
+
+main {
+    scroll-snap-type: y;
+}
+
+main > section {
+    scroll-snap-align: start;
+    scroll-margin-top: 6rem;
+}
+
+@include media-breakpoint-up(lg) {
+    main > section {
+        scroll-margin-top: 7.5rem;
+    }
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
 @include media-breakpoint-down(xs) {
     .container {
         padding-left: 1.5rem;
