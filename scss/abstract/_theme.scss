@@ -28,6 +28,7 @@
     --color-dark: hsl(var(--color-dark-h), var(--color-dark-s), var(--color-dark-l));
 }
 
+// Auto dark mode
 @media screen and (prefers-color-scheme: dark) {
     :root {
         --color-bg-h: 241;
@@ -101,46 +102,4 @@
 
     // --color-light: hsl(0, 0%, 7%);
     // --color-dark: hsl(0, 0%, 100%);
-}
-
-a {
-    color: var(--color-accent);
-    font-weight: 500;
-    text-decoration: underline;
-
-    &:hover, &:focus, &:active {
-        // color: var(--color-accent--200);
-        color: var(--color-accent);
-        text-decoration: none;
-    }
-}
-
-img {
-    max-width: 100%;
-}
-
-main {
-    scroll-snap-type: y;
-}
-
-main > section {
-    scroll-snap-align: start;
-    scroll-margin-top: 6rem;
-}
-
-@include media-breakpoint-up(lg) {
-    main > section {
-        scroll-margin-top: 7.5rem;
-    }
-}
-
-html, body {
-    scroll-behavior: smooth;
-}
-
-@include media-breakpoint-down(xs) {
-    .container {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
 }

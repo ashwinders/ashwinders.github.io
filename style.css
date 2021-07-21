@@ -8,35 +8,6 @@ body {
   color: var(--color-base) !important;
 }
 
-.btn:focus {
-  box-shadow: none !important;
-  outline-offset: 0.1rem !important;
-}
-
-.btn-primary {
-  background-color: var(--color-base) !important;
-  border-color: var(--color-base) !important;
-  outline-color: var(--color-base) !important;
-  color: var(--color-bg) !important;
-}
-.btn-primary:focus {
-  outline: 0.1rem solid var(--color-bg) !important;
-}
-
-.btn-outline-primary {
-  border-width: 2px !important;
-  border-color: var(--color-base) !important;
-  outline-color: var(--color-base) !important;
-  color: var(--color-base) !important;
-}
-.btn-outline-primary:hover {
-  background-color: var(--color-base) !important;
-  color: var(--color-bg) !important;
-}
-.btn-outline-primary:focus {
-  outline: 0.1rem solid var(--color-bg) !important;
-}
-
 *,
 *::before,
 *::after {
@@ -5999,18 +5970,8 @@ a.text-dark:hover, a.text-dark:focus {
   --color-dark-l: 100%;
 }
 
-a {
-  color: var(--color-accent);
-  font-weight: 500;
-  text-decoration: underline;
-}
-a:hover, a:focus, a:active {
-  color: var(--color-accent);
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
+html, body {
+  scroll-behavior: smooth;
 }
 
 main {
@@ -6027,8 +5988,18 @@ main > section {
     scroll-margin-top: 7.5rem;
   }
 }
-html, body {
-  scroll-behavior: smooth;
+a {
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: underline;
+}
+a:hover, a:focus, a:active {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 @media (max-width: 575.98px) {
@@ -6228,6 +6199,35 @@ header.scrolled {
     display: none;
   }
 }
+.btn:focus {
+  box-shadow: none !important;
+  outline-offset: 0.1rem !important;
+}
+
+.btn-primary {
+  background-color: var(--color-base) !important;
+  border-color: var(--color-base) !important;
+  outline-color: var(--color-base) !important;
+  color: var(--color-bg) !important;
+}
+.btn-primary:focus {
+  outline: 0.1rem solid var(--color-bg) !important;
+}
+
+.btn-outline-primary {
+  border-width: 2px !important;
+  border-color: var(--color-base) !important;
+  outline-color: var(--color-base) !important;
+  color: var(--color-base) !important;
+}
+.btn-outline-primary:hover {
+  background-color: var(--color-base) !important;
+  color: var(--color-bg) !important;
+}
+.btn-outline-primary:focus {
+  outline: 0.1rem solid var(--color-bg) !important;
+}
+
 .hero {
   min-height: 100vh;
   overflow: hidden;
