@@ -1,10 +1,11 @@
-html, body {
+html,
+body {
     scroll-behavior: smooth;
 }
 
-main {
-    scroll-snap-type: y;
-}
+// main {
+    // scroll-snap-type: y mandatory;
+// }
 
 main > section {
     scroll-snap-align: start;
@@ -21,8 +22,11 @@ a {
     color: var(--color-accent);
     font-weight: 500;
     text-decoration: underline;
+    text-underline-offset: 0.125rem;
 
-    &:hover, &:focus, &:active {
+    &:hover,
+    &:focus,
+    &:active {
         // color: var(--color-accent--200);
         color: var(--color-accent);
         text-decoration: none;
@@ -41,10 +45,19 @@ img {
 }
 
 .section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    min-height: 40vh;
+    display: grid;
+    place-items: center;
+
+    p {
+        line-height: 2;
+    }
 }
 
 .section__heading {
     font-weight: 900;
+}
+
+.love {
+    color: #eb4242;
 }

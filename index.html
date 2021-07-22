@@ -21,19 +21,19 @@
                 <div class="navbar__sidebar">
                     <ul class="navbar__list">
                         <li class="navbar__list-item">
-                            <a href="#skills" class="navbar__link"><i class="fas fa-magic"></i> Skills</a>
+                            <a href="#work" class="navbar__link"><i class="fas fa-boxes"></i> Work</a>
                         </li>
                         <li class="navbar__list-item">
                             <a href="#about" class="navbar__link"><i class="fas fa-id-badge"></i> About</a>
                         </li>
                         <li class="navbar__list-item">
-                            <a href="#work" class="navbar__link"><i class="fas fa-boxes"></i> Work</a>
+                            <a href="#skills" class="navbar__link"><i class="fas fa-magic"></i> Skills</a>
                         </li>
                         <li class="navbar__list-item">
                             <a href="#contact" class="navbar__link"><i class="fas fa-at"></i> Contact</a>
                         </li>
                         <li class="navbar__list-item">
-                            <a href="javascript:toggleTheme()" class="navbar__link"><i class="fas fa-adjust d-inline-block"></i> Theme</a>
+                            <a href="javascript:toggleTheme()" class="navbar__link"><i class="fas fa-sun"></i><i class="fas fa-moon"></i><span class="toggle-theme"> Theme</span></a>
                         </li>
                     </ul>
                 </div>
@@ -131,7 +131,7 @@
                             Front-end Web Developer
                         </h2>
                         <p class="hero__subtitle">
-                            I develop experiences that your clients will <span class="love">love</span>.
+                            I develop rich experiences that your clients will <span class="love">love</span>.
                         </p>
                         <div class="hero__cta-wrapper">
                             <a class="btn btn-primary" href="#contact">
@@ -145,58 +145,79 @@
                 </div>
             </div>
         </section>
-        <section class="section work" id="work">
+        <section class="section work py-5" id="work">
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <h2 class="section__heading">
+                        <h2 class="section__heading mb-4">
                             Featured Work
                         </h2>
+                        <p class="work__desc">
+                            Have a look at my <span class="d-inline-block"><i class="fab fa-github ml-1"></i> <a href="//github.com/ashwinders" target="_blank">Github </a></span> or <span class="d-inline-block"><i class="fab fa-codepen ml-1"></i> <a href="//codepen.io/ashwinders" target="_blank">Codepen</a></span> for a preview of my work.
+                        </p>
+                        <button title="View resume" class="btn btn-primary" onclick="window.open('Resume_Ashwinder_S_Arora.pdf')"><i class="fas fa-file-pdf mr-1"></i> View Resume</button>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section about" id="about">
+        <section class="section about py-5" id="about">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col">
                         <h2 class="section__heading mb-4">
                             About Me
                         </h2>
                         <p>
-                            A passionate engineer with a keen eye for simple, sophisticated, yet functional design. With my 2 years of demonstrated experience in front-end development, I bring ideas to life. My knack for attention to detail compels me to aim for the best.
+                            A passionate engineer with a keen eye for simple, sophisticated, yet functional design. With a knack for attention to detail, I develop websites that are fast, easy to use, and built with best practices.
+                            <br class="mb-3">
+                            My tools of the trade are HTML, CSS <i class="fas fa-heart love"></i>, and JavaScript.
                         </p>
-                        <!-- <img src="//unsplash.it/400" alt="test" class="mb-3"> -->
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section skills" id="skills">
+        <section class="section skills py-5" id="skills">
             <div class="container">
                 <div class="row">
-                    <div class="col">
-                        <h2 class="section__heading">
-                            My Skills
+                    <div class="col-12">
+                        <h2 class="section__heading mb-4">
+                            Core Competencies
                         </h2>
+                        <ul>
+                            <li>Responsive, reusable and scalable design</li>
+                            <li>Cross-browser compatibility</li>
+                            <li>Clean and documented codebase</li>
+                            <li>Pixel-perfect mockup translation</li>
+                            <li>Intuitive animations and transitions</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section contact" id="contact">
+        <section class="section contact py-5" id="contact">
             <div class="container">
                 <div class="row">
-                    <div class="col">
-                        <h2 class="section__heading">
+                    <div class="col-12">
+                        <h2 class="section__heading mb-4">
                             Contact Me
                         </h2>
+                        <p class="contact__desc">
+                            Have a project you'd like to discuss? Drop me a message at <a href="mailto:ashwindersn+gpf@gmail.com">ashwindersn@gmail.com</a>, or reach out to me on any of the following platforms:
+                        </p>
+                        <div class="contact__links-wrapper">
+                            <span class="d-inline-block"><i class="fab fa-github"></i> <a href="//github.com/ashwinders" target="_blank" class="">Github</a></span>
+                            <span class="d-inline-block"><i class="fab fa-linkedin-in"></i> <a href="//linkedin.com/in/ashwinders" target="_blank" class="">LinkedIn</a></span>
+                            <span class="d-inline-block"><i class="fab fa-angellist"></i> <a href="//angel.co/ashwinders" target="_blank" class="">Angel</a></span>
+                            <span class="d-inline-block"><i class="fab fa-twitter"></i> <a href="//twitter.com/ashwindersn" target="_blank" class="">Twitter</a></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <small class="copyright text-center py-4 d-block">
-            Copyright &copy; 2021 | Ashwinder Singh Arora
+        <small class="text-center py-5 d-block">
+            Copyright &copy; 2021 | Designed and developed by Ashwinder S. Arora
         </small>
     </footer>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />

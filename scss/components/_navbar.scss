@@ -93,6 +93,28 @@ header {
     }
 }
 
+.fa-moon, .fa-sun {
+    display: none;
+}
+
+
+@include media-breakpoint-up (lg) {
+    .toggle-theme {
+        display: none;
+    }
+}
+
+.theme--dark {
+    .fa-moon {
+        display: inline-block !important;
+    }
+}
+
+.theme--light {
+    .fa-sun {
+        display: inline-block !important;
+    }
+}
 
 .navbar__list {
     list-style: none;

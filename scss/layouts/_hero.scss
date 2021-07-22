@@ -22,7 +22,8 @@
     font-weight: 700;
 }
 
-.hero__title, .hero__subtitle {
+.hero__title,
+.hero__subtitle {
     margin-bottom: 1.5rem;
 }
 
@@ -36,21 +37,22 @@
     // width: 100vw;
 }
 
-.sun, .moon {
+.sun,
+.moon {
     height: 30vh;
     width: 30vh;
     min-height: 200px;
     min-width: 200px;
-    background-color: #FFC062;
+    background-color: #ffc062;
     border-radius: 50%;
     transform: translateX(-40%);
-    box-shadow: 0 0 20px rgba(#FFCE84, 80%);
+    box-shadow: 0 0 20px rgba(#ffce84, 80%);
 }
 
 .moon {
     display: none;
     background-color: #fff;
-    box-shadow: 0 0 30px rgba(#FFf, 80%);
+    box-shadow: 0 0 30px rgba(#fff, 80%);
 
     svg {
         width: 100%;
@@ -65,7 +67,7 @@
 .cloud {
     position: absolute;
     bottom: 12.5%;
-    filter: drop-shadow(0 0 2px rgba(0,0,0,0.12));
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.12));
     animation-name: moveCloud;
     animation-duration: 25s;
     animation-fill-mode: forwards;
@@ -113,8 +115,9 @@
     .scene {
         max-width: 100%;
     }
-    
-    .sun, .moon {
+
+    .sun,
+    .moon {
         margin: auto;
         transform: unset;
     }
