@@ -1,8 +1,4 @@
-$font-family: "Fira Mono", monospace;
-
-* {
-    font-family: $font-family;
-}
+$font-family-base: "Fira Mono", monospace;
 
 body {
     background-color: var(--color-bg) !important;
