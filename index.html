@@ -347,10 +347,20 @@
         <small class="text-center py-5 d-block">
             Copyright &copy; 2021 | Designed and developed by Ashwinder S. Arora
         </small>
+        <button title="Go to top" class="btn btn-primary scroll-to-top" onclick="scrollToTop()">
+            <i class="fas fa-angle-up"></i>
+        </button>
     </footer>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
     <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
         window.addEventListener('load',() => {
             //Sidebar wrapper
             const navbarSidebar = document.querySelector(".navbar__sidebar")
@@ -408,14 +418,14 @@
                 }
             })
 
-            // const scrollTopButton = document.querySelector(".scroll-to-top")
-            // document.addEventListener('scroll', (event)=>{
-            //     if(window.scrollY > window.innerHeight/2){
-            //         scrollTopButton.classList.add('visible')
-            //     } else {
-            //         scrollTopButton.classList.remove('visible')
-            //     }
-            // })
+            const scrollTopButton = document.querySelector(".scroll-to-top")
+            document.addEventListener('scroll', (event)=>{
+                if(window.scrollY > window.innerHeight/2){
+                    scrollTopButton.classList.add('visible')
+                } else {
+                    scrollTopButton.classList.remove('visible')
+                }
+            })
         }) 
 
         function toggleTheme() {
