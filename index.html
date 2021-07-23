@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" class="theme--light">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -421,20 +421,36 @@
         function toggleTheme() {
             const htmlEl = document.querySelector("html");
             if (htmlEl.classList.contains('theme--dark')) {
-                htmlEl.classList.remove('theme--dark')
-                return htmlEl.classList.add('theme--light')
-            } 
-            htmlEl.classList.add('theme--dark')
-            htmlEl.classList.remove('theme--light')
+                setLightTheme()
+            } else {
+                setDarkTheme();
+            }   
         }
 
-        if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            toggleTheme();
+        // Set default theme based on user preference
+        function setDefaultTheme() {
+            if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                setDarkTheme();
+            } else {
+                setLightTheme();
+            }
+        }
+
+        function setDarkTheme() {
+            document.querySelector("html").classList.add('theme--dark')
+            document.querySelector("html").classList.remove('theme--light')
+        }
+
+        function setLightTheme() {
+            document.querySelector("html").classList.remove('theme--dark')
+            document.querySelector("html").classList.add('theme--light')
         }
 
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-            toggleTheme()
+            setDefaultTheme();
         });
+
+        setDefaultTheme();
     </script>
 </body>
 </html>

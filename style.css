@@ -5895,9 +5895,9 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 :root {
-  --color-bg-h: 242;
-  --color-bg-s: 74%;
-  --color-bg-l: 11%;
+  --color-bg-h: 203;
+  --color-bg-s: 100%;
+  --color-bg-l: 90%;
   --color-base-h: 0;
   --color-base-s: 0%;
   --color-base-l: 7%;
@@ -5933,22 +5933,6 @@ a.text-dark:hover, a.text-dark:focus {
   );
 }
 
-@media screen and (prefers-color-scheme: dark) {
-  :root {
-    --color-bg-h: 242;
-    --color-bg-s: 74%;
-    --color-bg-l: 11%;
-    --color-base-h: 0;
-    --color-base-s: 0%;
-    --color-base-l: 100%;
-    --color-light-h: 0;
-    --color-light-s: 0%;
-    --color-light-l: 7%;
-    --color-dark-h: 0;
-    --color-dark-s: 0%;
-    --color-dark-l: 100%;
-  }
-}
 .theme--light {
   --color-bg-h: 203;
   --color-bg-s: 100%;
@@ -6121,7 +6105,7 @@ header.scrolled {
   display: none;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .toggle-theme {
     display: none;
   }

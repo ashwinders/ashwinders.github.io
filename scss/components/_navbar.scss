@@ -98,7 +98,7 @@ header {
 }
 
 
-@include media-breakpoint-up (lg) {
+@include media-breakpoint-up (xl) {
     .toggle-theme {
         display: none;
     }
