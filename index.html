@@ -39,6 +39,7 @@
             overflow: hidden;
         }
 
+        /* Although the overflow property can't be animated, using it in an animation helps adding a delay without using javascript. */
         .loaded body {
             animation: removeBodyOverflow 5s linear forwards;
         }
