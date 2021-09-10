@@ -104,11 +104,13 @@
         }
     </style>
 </head>
-<body onload="setTimeout(()=>{loaded()},1000)">
+<body onload="loaded()">
     <script>
         function loaded() {
-            const htmlEl = document.querySelector('html')
-            htmlEl.classList.add('loaded')
+            setTimeout( () => {
+                const htmlEl = document.querySelector('html');
+                htmlEl.classList.add('loaded');
+            }, 1000)
         }
     </script>
     <div class="preloader" id="preloader">
